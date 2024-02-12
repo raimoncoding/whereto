@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Test of API_KEYS uit config.js direct gebruikt kunnen worden
-    console.log(API_KEYS.openWeatherMap); // Zou de API-sleutel moeten loggen
 
     const submitBtn = document.getElementById('submitBtn');
     const cityInput = document.getElementById('cityInput');
