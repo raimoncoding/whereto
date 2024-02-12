@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function fetchWeather(city) {
-        const apiKey = window.API_KEYS.openWeatherMap;
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+        // Aanpassing: URL wijst nu naar je Netlify serverless functie
+        const apiUrl = `/.netlify/functions/weather?city=${city}`;
     
         fetch(apiUrl)
             .then(response => {
@@ -33,10 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(data => {
                 displayWeather(data);
-                // Haal hier de coördinaten uit de data en gebruik die voor de fetchPlaces aanroep
-                const latitude = data.coord.lat;
-                const longitude = data.coord.lon;
-                fetchPlaces(latitude, longitude); // Voer deze functie uit met de juiste coördinaten
+                // Omdat de serverless functie al de benodigde data teruggeeft,
+                // hoef je niet opnieuw coördinaten te extraheren voor verdere API-aanroepen,
+                // tenzij je serverless functie deze ook teruggeeft en je ze nodig hebt voor andere doeleinden.
             })
             .catch(error => {
                 alert(error.message);
