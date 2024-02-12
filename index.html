@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gepersonaliseerde Reisplanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gepersonaliseerde Reisplanner</h1>
+        <label for="cityInput">Voer een stad in:</label>
+        <input type="text" id="cityInput" placeholder="Stad">
+    
+        <button id="submitBtn">Zoeken</button>
+    
+        <div id="results">
+            <div id="weather" class="weather-container"></div>
+            <div id="restaurants" class="restaurant-container">
+                <h3>Top 5 Restaurants:</h3> <!-- Verplaatst het kopje hier -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- <script type="module" src="script.js"></script> -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

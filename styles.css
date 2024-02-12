@@ -1,0 +1,130 @@
+body {
+    background-color: #111;
+    color: orange;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+h1 {
+    color: purple;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: orange;
+    color: #111;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: purple;
+}
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.weather-container {
+    background-color: #66ccff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.weather-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.weather p {
+    margin: 0;
+}
+
+.sun {
+    color: yellow;
+}
+
+.rain {
+    color: blue;
+}
+
+.cloud {
+    color: lightgrey;
+}
+
+.snow {
+    color: white;
+}
+
+.thunderstorm {
+    color: purple;
+}
+
+
+
+.restaurant-container {
+    background-color: #555; /* Achtergrondkleur voor de restaurantcontainer */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#restaurants {
+    background-color: #555;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#restaurants h3 {
+    color: orange;
+    margin-top: 0; /* Verwijder de bovenmarge om dichter bij de inhoud te staan */
+}
+
+
+
+.restaurant {
+    background-color: #777; /* Achtergrondkleur voor individuele restaurants */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.restaurant p {
+    color: white;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .weather-container {
+        width: 100%; /* Maak de weer-container 100% breed op grotere schermen */
+        margin-bottom: 20px; /* Voeg wat ruimte onder de weer-container toe */
+    }
+
+    #results {
+        grid-template-columns: 1fr; /* Zorg ervoor dat de resultaten onder elkaar worden weergegeven */
+    }
+}
+
+
+
